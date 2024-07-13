@@ -1,0 +1,22 @@
+public class FindTheDuplicatesInArray {
+    public static void main(String[] args) {
+        
+        int[] array = { 1, 2, 3, 4, 2, 5, 6, 1, 3 };
+        
+        
+        Set<Integer> set = new HashSet<>();
+        
+        
+        Set<Integer> duplicates = new HashSet<>();
+        
+        
+        for (int i = 0; i < array.length; i++) {
+            // If element is already present in HashSet, it's a duplicate
+            if (!set.add(array[i])) {
+                duplicates.add(array[i]);
+            }
+        }
+        
+        System.out.println("Duplicates in the array: " + duplicates);
+    }
+}
